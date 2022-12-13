@@ -78,7 +78,7 @@ struct Packet {
         // enter loop
         idxL++;
         idxR++;
-        checkInCorrectOrder(result, stringL, idxL, stringR, idxR);
+        //checkInCorrectOrder(result, stringL, idxL, stringR, idxR);
         continue;
       }
 
