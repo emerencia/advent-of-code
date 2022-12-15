@@ -60,9 +60,9 @@ public:
       for (int x = v[i].sensorX - manhattan - 1; x <= v[i].sensorX + manhattan + 1; x++) {
         if (x < 0 || x > LIMIT) continue;
         int y = v[i].sensorY + (manhattan + 1 - (x - v[i].sensorX));
-        if (y >= 0 && y <= LIMIT && isUnseen(x, y, v)) return (LL) FACTOR * x + (LL) y;
+        if (y >= 0 && y <= LIMIT && isUnseen(x, y, v)) return (LL) FACTOR * x + y;
         y = v[i].sensorY - (manhattan + 1 - (x - v[i].sensorX));
-        if (y >= 0 && y <= LIMIT && isUnseen(x, y, v)) return (LL) FACTOR * x + (LL) y;
+        if (y >= 0 && y <= LIMIT && isUnseen(x, y, v)) return (LL) FACTOR * x + y;
       }
     }
     return 0;
