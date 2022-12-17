@@ -44,7 +44,7 @@ vector<Node *> Node::nodes;
 map<string, int> Node::lookup;
 int Node::count = 0;
 
-int mem[30][58][2 << 16];
+int mem[30][58][1 << 16];
 
 class Assignment {
 public:

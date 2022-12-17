@@ -57,20 +57,19 @@ public:
     }
     int &r = mem[minutesLeft][nodeIdx][mask][player];
     if (r != -1) return r;
-    int s = 0;
+    r = 0;
     // if we are on a node that has flowrate and the valve is closed, we can choose to open it
     Node *curNode = Node::nodes[nodeIdx];
     int maskIndex = curNode->maskIndex;
     if (maskIndex != -1 && (!(mask & (1 << maskIndex)))) {
-      s = max(s, (minutesLeft * (curNode->flowrate)) +
+      r = max(r, (minutesLeft * (curNode->flowrate)) +
                  maxFlow(minutesLeft - 1, nodeIdx, mask | (1 << maskIndex), player));
     }
     // we can instead choose to go in any direction
     for (int i = 0; i < curNode->edges.size(); i++) {
       int nextNode = Node::lookup[curNode->edges[i]];
-      s = max(s, maxFlow(minutesLeft - 1, nextNode, mask, player));
+      r = max(r, maxFlow(minutesLeft - 1, nextNode, mask, player));
     }
-    r = s;
     return r;
   }
 
