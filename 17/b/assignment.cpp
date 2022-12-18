@@ -133,6 +133,7 @@ public:
       getline(cin, pattern);
       if (pattern.empty()) continue;
 
+      // This solution is brute force.
       // My idea was that at some point, there would be a repeating pattern, where:
       // if you simulate a tower with height X
       // then simulate a tower with height 2*X
