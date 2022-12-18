@@ -136,7 +136,8 @@ public:
       // My idea was that at some point, there would be a repeating pattern, where:
       // if you simulate a tower with height X
       // then simulate a tower with height 2*X
-      // they'd have a difference of Y.
+      // Comparing two times the height X tower against a tower of height 2*X would
+      // give difference of Y, where the towers "overlap".
       // and then you could predict the length of a tower of height 3*X by
       // calculating 3*X - 2*Y.
       // The solution below finds a repeating pattern at i = 1750, which resulted
