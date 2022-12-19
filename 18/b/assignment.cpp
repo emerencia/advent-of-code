@@ -24,14 +24,13 @@ typedef pair<PII, int> PIII;
 // The number of sides this cube is missing.
 // Note that a side is only shared between two cubes.
 const int CENTER2 = 1;
-int reachable[22][22][22];
 int iscube[22][22][22];
 int seen[22][22][22];
 
 class Assignment {
 public:
 
-  void markMissingNeighbors(const PIII &cube) {
+  void setCube(const PIII &cube) {
     int x = cube.first.first;
     int y = cube.first.second;
     int z = cube.second;
@@ -46,14 +45,13 @@ public:
     // if we got here from another route first, prefer that one
     if (seen[x][y][z]) return 0;
     seen[x][y][z] = 1;
-    int &r = reachable[x][y][z];
-    if (isReachable(x + 1, y, z)) return r = 1;
-    if (isReachable(x - 1, y, z)) return r = 1;
-    if (isReachable(x, y + 1, z)) return r = 1;
-    if (isReachable(x, y - 1, z)) return r = 1;
-    if (isReachable(x, y, z + 1)) return r = 1;
-    if (isReachable(x, y, z - 1)) return r = 1;
-    return r = 0;
+    if (isReachable(x + 1, y, z)) return 1;
+    if (isReachable(x - 1, y, z)) return 1;
+    if (isReachable(x, y + 1, z)) return 1;
+    if (isReachable(x, y - 1, z)) return 1;
+    if (isReachable(x, y, z + 1)) return 1;
+    if (isReachable(x, y, z - 1)) return 1;
+    return 0;
   }
 
   LL solution() {
@@ -71,15 +69,9 @@ public:
       if (third > maxint) maxint = third;
       cubes.push_back({{first, second}, third});
     }
-    /*
-    for (int i = 0; i < cubes.size(); i++) {
-      cout << cubes[i].first.first << " :: " << cubes[i].first.second << " :: " << cubes[i].second << endl;
-    }
-    */
     memset(iscube, 0, sizeof(iscube));
-    memset(reachable, -1, sizeof(reachable));
     for (int i = 0; i < cubes.size(); i++) {
-      markMissingNeighbors(cubes[i]);
+      setCube(cubes[i]);
     }
     cout << maxint << endl << flush;
     LL result = 0;
@@ -100,7 +92,6 @@ public:
       memset(seen, 0, sizeof(seen));
       result += isReachable(x + CENTER2, y + CENTER2, z - 1 + CENTER2);
     }
-
     return result;
   }
 };
