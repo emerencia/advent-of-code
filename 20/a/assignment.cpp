@@ -18,50 +18,61 @@
 
 using namespace std;
 typedef long long LL;
-typedef pair<LL, LL> PII;
-
-const LL DECRYPTION_KEY = 811589153;
+typedef pair<int, int> PII;
 
 class Assignment {
 public:
 
-  LL solution() {
+  int solution() {
     vector<PII> numbers;
-    LL result = 0;
-    LL idx = 0;
+    int result = 0;
+    int idx = 0;
     while (cin.good()) {
       string line;
       getline(cin, line);
       if (line.empty()) continue;
       stringstream s(line);
-      LL number;
+      int number;
       s >> number;
-      numbers.push_back({(LL)number * DECRYPTION_KEY,idx});
+      numbers.push_back({number, idx});
       idx++;
     }
-    for (int k=0;k<10;k++) {
-      for (LL i = 0; i < numbers.size(); i++) {
-        for (LL j = 0; j < numbers.size(); j++) {
-          PII value = numbers[j];
-          if (value.second == i) {
-            if (value.first == 0) break;
-            numbers.erase(numbers.begin() + j);
-            LL newpos = (((j + value.first + (LL)4* DECRYPTION_KEY * numbers.size()) % numbers.size()));
-            if (newpos == 0) {
-              numbers.push_back(value);
-            } else {
-              numbers.insert(numbers.begin() + newpos, value);
-            }
-            break;
+    /*
+    for (int i = 0; i < numbers.size(); i++) {
+      cout << numbers[i].first << " ";
+    }
+    cout << endl;
+    */
+    for (int i = 0; i < numbers.size(); i++) {
+      for (int j = 0; j < numbers.size(); j++) {
+        PII value = numbers[j];
+        if (value.second == i) {
+          if (value.first == 0) break;
+          numbers.erase(numbers.begin() + j);
+          int newpos = (((j + value.first + 4 * numbers.size()) % numbers.size()));
+          if (newpos == 0) {
+            // cout << "moving: " << value.first << ", inserting at the end" << endl;
+            numbers.push_back(value);
+          } else {
+            // cout << "moving: " << value.first << ", inserting at: " << newpos << endl;
+            numbers.insert(numbers.begin() + newpos, value);
           }
+          /*
+          for (int k = 0; k < numbers.size(); k++) {
+            cout << numbers[k].first << " ";
+          }
+          cout << endl;
+          */
+          break;
         }
       }
     }
-    for (LL i=0;i<numbers.size();i++) {
+    for (int i = 0; i < numbers.size(); i++) {
       PII value = numbers[i];
       if (value.first != 0) continue;
-      for (LL j=0;j<3;j++) {
-        LL pos = (i + (j + 1) * 1000) % numbers.size();
+      for (int j = 0; j < 3; j++) {
+        int pos = (i + (j + 1) * 1000) % numbers.size();
+        cout << "number " << ((j + 1) * 1000) << " is " << numbers[pos].first << endl;
         result += numbers[pos].first;
       }
       break;
