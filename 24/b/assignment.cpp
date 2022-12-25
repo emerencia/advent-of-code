@@ -38,6 +38,8 @@ public:
 
   // start pos and end pos are always free because there are no vertical blizzards
   // on the first or last open column of both the example and actual input.
+  // Since we calculate the isFree position in constant time, there's no
+  // big O performance improvement gained from caching this information.
   bool isFree(int row, int col, int minutesSpent) {
     // if out of bounds then false;
     if (row < 0 || row >= grid.size()) return false;
