@@ -23,6 +23,7 @@ typedef pair<int, int> PII;
 class Assignment {
 public:
   vector<string> numbers;
+
   string solution() {
     numbers.clear();
     int maxlen = 0;
@@ -32,21 +33,21 @@ public:
       if (line.empty()) continue;
 
       numbers.push_back(line);
-      maxlen = max(maxlen,(int)line.size());
+      maxlen = max(maxlen, (int) line.size());
     }
     string r;
     int nextsum = 0;
-    for (int i = 0;i<maxlen;i++) {
+    for (int i = 0; i < maxlen; i++) {
       int sum = nextsum;
-      for (int j=0;j<numbers.size();j++) {
-        int pos = (int)numbers[j].size() - 1 - i;
+      for (int j = 0; j < numbers.size(); j++) {
+        int pos = (int) numbers[j].size() - 1 - i;
         if (pos < 0) continue;
         char digit = numbers[j][pos];
         if (digit >= '0' && digit <= '2') {
           sum += digit - '0';
         } else if (digit == '=') {
           sum -= 2;
-        } else if (digit  == '-') {
+        } else if (digit == '-') {
           sum--;
         } else {
           cout << "ERROR: unknown digit: " << digit << endl;
@@ -59,7 +60,7 @@ public:
       }
       nextsum = (sum + 2) / 5;
       nextsum += nextdiff;
-      int nextchar = sum%5;
+      int nextchar = sum % 5;
       if (nextchar < 3) {
         r += '0' + nextchar;
       } else if (nextchar == 3) {
@@ -68,7 +69,7 @@ public:
         r += '-';
       }
     }
-    reverse(r.begin(),r.end());
+    reverse(r.begin(), r.end());
     return r;
   }
 };
