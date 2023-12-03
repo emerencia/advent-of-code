@@ -1,0 +1,9 @@
+struct
+game
+rounds
+parser
+gcd
+pointer
+input_parsing
+ll
+mod
