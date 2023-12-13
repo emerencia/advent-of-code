@@ -7,6 +7,7 @@ Difficulty Rank (from easy to difficult):
 - 04: scratchcards: simple dynamic programming (get multiple of next cards)
 - 11: cosmic expansion: double a grid in size. calculate pairwise manhattan distances.
 - 07: camel cards: calculate the score of a hand in a card game. custom sort. lots of rules programming.
+- 13: point of incidence: reflection lines in a grid. didn't have to optimize at all so pretty easy.
 - 03: gear ratios: grid, adjacency, sets, maps, vectors of vectors.
 - 12: hot springs: recursive with memoization.
 - 05: seed-to-soil map: queueing and splitting half-overlapping ranges or going in reverse.
