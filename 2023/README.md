@@ -10,6 +10,7 @@ Difficulty Rank (from easy to difficult):
 - 13: point of incidence: reflection lines in a grid. didn't have to optimize at all so pretty easy.
 - 03: gear ratios: grid, adjacency, sets, maps, vectors of vectors.
 - 12: hot springs: recursive with memoization.
+- 14: parabolic reflector dish: keeping a complicated state. modulo.
 - 05: seed-to-soil map: queueing and splitting half-overlapping ranges or going in reverse.
 - 10: pipe maze: scanline with some extra difficulties. hard if you don't know scanline.
 - 08: haunted wasteland: lcm, chinese remainder theorem. impossible if you don't know it, easy if you do.
