@@ -3,6 +3,7 @@ Difficulty Rank (from easy to difficult):
 - 02: cube conundrum: fewest cubes possible to make the game possible. max.
 - 01: trebuchet: string parsing/replacing. int to digit or reverse.
 - 09: mirage maintenance: extrapolation. insert at the start and end of a vector.
+- 15: lens library: input parsing, modulo, ascii, vectors of vectors. very easy. 
 - 06: wait for it: quadratic formula to determine number of ways to beat a record.
 - 04: scratchcards: simple dynamic programming (get multiple of next cards)
 - 11: cosmic expansion: double a grid in size. calculate pairwise manhattan distances.
