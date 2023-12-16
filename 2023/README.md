@@ -10,6 +10,7 @@ Difficulty Rank (from easy to difficult):
 - 07: camel cards: calculate the score of a hand in a card game. custom sort. lots of rules programming.
 - 13: point of incidence: reflection lines in a grid. didn't have to optimize at all so pretty easy.
 - 03: gear ratios: grid, adjacency, sets, maps, vectors of vectors.
+- 16: the floor will be lava. queue with seen state. part b wasn't harder.
 - 12: hot springs: recursive with memoization.
 - 14: parabolic reflector dish: keeping a complicated state. modulo.
 - 05: seed-to-soil map: queueing and splitting half-overlapping ranges or going in reverse.
