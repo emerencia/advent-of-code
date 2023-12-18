@@ -54,10 +54,8 @@ public:
       if (minHeatLossSeen.find({{crow, ccol}, prevDir}) != minHeatLossSeen.end()) {
         int minHeatLoss = minHeatLossSeen[{{crow, ccol}, prevDir}];
         if (heatLossSoFar >= minHeatLoss) continue;
-        minHeatLossSeen[{{crow, ccol}, prevDir}] = heatLossSoFar;
-      } else {
-        minHeatLossSeen[{{crow, ccol}, prevDir}] = heatLossSoFar;
       }
+      minHeatLossSeen[{{crow, ccol}, prevDir}] = heatLossSoFar;
 
       if (crow == heatLoss.size() - 1 && ccol == heatLoss[0].size() - 1) {
         result = min(result, heatLossSoFar);
