@@ -16,3 +16,4 @@ Difficulty Rank (from easy to difficult):
 - 05: seed-to-soil map: queueing and splitting half-overlapping ranges or going in reverse.
 - 10: pipe maze: scanline with some extra difficulties. hard if you don't know scanline.
 - 08: haunted wasteland: lcm, chinese remainder theorem. impossible if you don't know it, easy if you do.
+- 17: clumsy crucible: bfs with a queue and restricted state + restricted paths and optimization. part b was 2 minutes of work.
