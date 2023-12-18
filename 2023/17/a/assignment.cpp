@@ -36,18 +36,18 @@ public:
   }
 
   int minimumHeatloss(int row, int col) {
-    queue<PIV> q;
-    // set<PIV> seen;
+    // reverse the order of the priority queue, so we get the smallest heat loss first.
+    priority_queue<PIV, vector<PIV>, greater<>> q;
     map<PIII, int> minHeatLossSeen;
-    q.emplace(row, col, -1, 0);
+    q.emplace(0, row, col, -1);
     int result = INT_MAX;
     while (!q.empty()) {
-      PIV p = q.front();
+      PIV p = q.top();
       q.pop();
-      int crow = get<0>(p);
-      int ccol = get<1>(p);
-      int prevDir = get<2>(p);
-      int heatLossSoFar = get<3>(p);
+      int heatLossSoFar = get<0>(p);
+      int crow = get<1>(p);
+      int ccol = get<2>(p);
+      int prevDir = get<3>(p);
 
       if (heatLossSoFar > result) continue;
 
@@ -58,10 +58,7 @@ public:
       } else {
         minHeatLossSeen[{{crow, ccol}, prevDir}] = heatLossSoFar;
       }
-      /* Turns out this wasn't needed and just slowed things
-      if (seen.find(p) != seen.end()) continue;
-      seen.insert(p);
-      */
+
       if (crow == heatLoss.size() - 1 && ccol == heatLoss[0].size() - 1) {
         result = min(result, heatLossSoFar);
       }
@@ -79,7 +76,7 @@ public:
           ncol += ds[d].second;
           if (outofBounds(nrow, ncol)) break;
           nHeatLossSoFar += heatLoss[nrow][ncol];
-          q.emplace(nrow, ncol, d, nHeatLossSoFar);
+          q.emplace(nHeatLossSoFar, nrow, ncol, d);
         }
       }
     }
