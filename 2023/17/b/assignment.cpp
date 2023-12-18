@@ -37,7 +37,6 @@ public:
 
   int minimumHeatloss(int row, int col) {
     queue<PIV> q;
-    set<PIV> seen;
     map<PIII, int> minHeatLossSeen;
     q.emplace(row, col, -1, 0);
     int result = INT_MAX;
@@ -51,9 +50,6 @@ public:
 
       if (heatLossSoFar > result) continue;
 
-      // remove: will never be the case
-      if (outofBounds(crow, ccol)) continue;
-
       if (minHeatLossSeen.find({{crow, ccol}, prevDir}) != minHeatLossSeen.end()) {
         int minHeatLoss = minHeatLossSeen[{{crow, ccol}, prevDir}];
         if (heatLossSoFar >= minHeatLoss) continue;
@@ -61,11 +57,6 @@ public:
       } else {
         minHeatLossSeen[{{crow, ccol}, prevDir}] = heatLossSoFar;
       }
-
-      /*
-      if (seen.find(p) != seen.end()) continue;
-      seen.insert(p);
-      */
 
       if (crow == heatLoss.size() - 1 && ccol == heatLoss[0].size() - 1) {
         result = min(result, heatLossSoFar);
