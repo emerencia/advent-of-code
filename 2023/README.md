@@ -13,6 +13,7 @@ Difficulty Rank (from easy to difficult):
 - 16: the floor will be lava: queue with seen state. part b wasn't harder.
 - 12: hot springs: recursive with memoization.
 - 14: parabolic reflector dish: keeping a complicated state. modulo.
+- 19: aplenty: have a set of ranges put through a set of rules and combine the results.
 - 05: seed-to-soil map: queueing and splitting half-overlapping ranges or going in reverse.
 - 10: pipe maze: scanline with some extra difficulties. hard if you don't know scanline.
 - 08: haunted wasteland: lcm, chinese remainder theorem. impossible if you don't know it, easy if you do.
