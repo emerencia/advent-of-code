@@ -19,3 +19,4 @@ Difficulty Rank (from easy to difficult):
 - 08: haunted wasteland: lcm, chinese remainder theorem. impossible if you don't know it, easy if you do.
 - 17: clumsy crucible: bfs with a queue and restricted state + restricted paths and optimization. part b was 2 minutes of work.
 - 18: lavaduct lagoon: scanline with segments instead of cells.
+- 20: pulse propagation: simulation as far as feasible, calculate the rest with lcm.
