@@ -20,3 +20,4 @@ Difficulty Rank (from easy to difficult):
 - 17: clumsy crucible: bfs with a queue and restricted state + restricted paths and optimization. part b was 2 minutes of work.
 - 18: lavaduct lagoon: scanline with segments instead of cells.
 - 20: pulse propagation: simulation as far as feasible, calculate the rest with lcm.
+- 21: step counter: calculate expansion of a grid with extrapolation.
