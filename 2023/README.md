@@ -11,6 +11,7 @@ Difficulty Rank (from easy to difficult):
 - 13: point of incidence: reflection lines in a grid. didn't have to optimize at all so pretty easy.
 - 03: gear ratios: grid, adjacency, sets, maps, vectors of vectors.
 - 16: the floor will be lava: queue with seen state. part b wasn't harder.
+- 22: sand slabs: 3d coords with keeping track of some state. no optimization was needed.
 - 12: hot springs: recursive with memoization.
 - 14: parabolic reflector dish: keeping a complicated state. modulo.
 - 19: aplenty: have a set of ranges put through a set of rules and combine the results.
