@@ -22,4 +22,5 @@ Difficulty Rank (from easy to difficult):
 - 18: lavaduct lagoon: scanline with segments instead of cells.
 - 23: a long walk: dfs with backtracking + optimization. 
 - 20: pulse propagation: simulation as far as feasible, calculate the rest with lcm.
+- 24: never tell me the odds: algebra, linear equations + brute force.
 - 21: step counter: calculate expansion of a grid with extrapolation.
