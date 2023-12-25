@@ -86,7 +86,7 @@ public:
     // the position vector of our "line that intersects everything". So we take any two hailstones a and b, and
     // let our "line that intersects everything" be called c. Then we solve the formulas where:
     //
-    // position a + velocity a * t1 = position c + velocity b * t1
+    // position a + velocity a * t1 = position c + velocity c * t1
     // position b + velocity b * t2 = position c + velocity c * t2
     //
     // The only unknowns here are the position of c and t1 and t2. But each formula
