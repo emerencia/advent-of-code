@@ -1,4 +1,4 @@
-Difficulty Rank (from easy to difficult):
+### Difficulty Rank (from easy to difficult):
 
 - 02: cube conundrum: fewest cubes possible to make the game possible. max.
 - 01: trebuchet: string parsing/replacing. int to digit or reverse.
@@ -17,10 +17,15 @@ Difficulty Rank (from easy to difficult):
 - 19: aplenty: have a set of ranges put through a set of rules and combine the results.
 - 05: seed-to-soil map: queueing and splitting half-overlapping ranges or going in reverse.
 - 10: pipe maze: scanline with some extra difficulties. hard if you don't know scanline.
+- 25: snowverload: min cut in a graph but with a twist. bfs with some crude optimization. no part b.
 - 08: haunted wasteland: lcm, chinese remainder theorem. impossible if you don't know it, easy if you do.
 - 17: clumsy crucible: bfs with a queue and restricted state + restricted paths and optimization. part b was 2 minutes of work.
 - 18: lavaduct lagoon: scanline with segments instead of cells.
-- 23: a long walk: dfs with backtracking + optimization. 
+- 23: a long walk: dfs with backtracking + optimization.
 - 20: pulse propagation: simulation as far as feasible, calculate the rest with lcm.
 - 24: never tell me the odds: algebra, linear equations + brute force.
 - 21: step counter: calculate expansion of a grid with extrapolation.
+
+![image](all_stars_1.gif)
+
+![image](all_stars_2.gif)
