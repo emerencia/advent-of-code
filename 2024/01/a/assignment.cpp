@@ -22,8 +22,7 @@ typedef pair<int, int> PII;
 
 class Assignment {
 public:
-
-  int solution() {
+  static int solution() {
     int result = 0;
     vector<int> left;
     vector<int> right;
@@ -48,6 +47,5 @@ public:
 };
 
 int main() {
-  Assignment obj;
-  cout << obj.solution() << endl;
+  cout << Assignment::solution() << endl;
 }

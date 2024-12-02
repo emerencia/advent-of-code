@@ -41,7 +41,7 @@ public:
         right[y]++;
       }
     }
-    for (int i : left) {
+    for (int i: left) {
       if (right.find(i) != right.end()) {
         result += i * right[i];
       }
