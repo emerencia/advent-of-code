@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.5)
+project(advent-of-code)
+
+set(SOURCE_FILES "2024/01/b/assignment.cpp")
+
+# comment the next line if you want to debug
+set(GCC_COMPILE_FLAGS "-Wall -Wextra -Werror -O2 -Wno-reorder -Wno-sign-compare")
+
+add_definitions(${GCC_COMPILE_FLAGS})
+add_executable(advent-of-code ${SOURCE_FILES})
