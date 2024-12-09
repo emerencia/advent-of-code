@@ -81,15 +81,15 @@ public:
   }
 
   int solution() {
-    int result = 0;
+    string lines;
     while (cin.good()) {
       string line;
       getline(cin, line);
       if (line.empty()) continue;
 
-      result += addMultiplications(line);
+      lines += line;
     }
-    return result;
+    return addMultiplications(lines);
   }
 };
 
