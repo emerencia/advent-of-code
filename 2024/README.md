@@ -6,3 +6,4 @@
 - 03: mull it over: write a parser.
 - 05: print queue: input parsing, maps, and swaps in vectors.
 - 06: guard gallivant: grid walk, seen state.
+- 07: bridge repair: recursion, long longs, concatenation of numbers.
