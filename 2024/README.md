@@ -5,3 +5,4 @@
 - 04: ceres search: navigate in a grid.
 - 03: mull it over: write a parser.
 - 05: print queue: input parsing, maps, and swaps in vectors.
+- 06: guard gallivant: grid walk, seen state.
