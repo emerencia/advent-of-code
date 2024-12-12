@@ -8,3 +8,4 @@
 - 06: guard gallivant: grid walk, seen state.
 - 07: bridge repair: recursion, long longs, concatenation of numbers.
 - 08: resonant collinearity: grid, coords, sets, and maps. 
+- 09: disk fragmenter: pointers. 
