@@ -7,4 +7,7 @@
 - 05: print queue: input parsing, maps, and swaps in vectors.
 - 06: guard gallivant: grid walk, seen state.
 - 07: bridge repair: recursion, long longs, concatenation of numbers.
-- 08: resonant collinearity: grid, coords, sets, and maps. 
+- 08: resonant collinearity: grid, coords, sets, and maps.
+- 10: hoof it: bfs, grid, and dynamic programming.
+- 09: disk fragmenter: pointers. 
+- 11: plutonian pebbles: memoization and recursion. first day where the naive approach didn't work for part b. 
